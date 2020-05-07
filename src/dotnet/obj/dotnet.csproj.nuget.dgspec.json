@@ -1,0 +1,67 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/rkuszews/Downloads/native-api-contest-template/src/dotnet/dotnet.csproj": {}
+  },
+  "projects": {
+    "/Users/rkuszews/Downloads/native-api-contest-template/src/dotnet/dotnet.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/rkuszews/Downloads/native-api-contest-template/src/dotnet/dotnet.csproj",
+        "projectName": "dotnet",
+        "projectPath": "/Users/rkuszews/Downloads/native-api-contest-template/src/dotnet/dotnet.csproj",
+        "packagesPath": "/Users/rkuszews/.nuget/packages/",
+        "outputPath": "/Users/rkuszews/Downloads/native-api-contest-template/src/dotnet/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/rkuszews/Downloads/native-api-contest-template/src/dotnet/NuGet.Config",
+          "/Users/rkuszews/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "/Users/rkuszews/Downloads/native-api-contest-template/src/dotnet/./nupkg": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "IRISProviderCore21": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.102/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
