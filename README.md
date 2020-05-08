@@ -17,10 +17,10 @@ You should provide a repository where docker-compose can be used to build a cont
 You should include instructions for running your application within the docker image. 
 
 Sample programs are contained in this repository to make it easier to get started.
-* [Java](./src/java/README.md)
-* [Python](./src/python/README.md)
-* [.NET Core](./src/dotnet/README.md)
-* [NodeJS](./src/nodejs/README.md)
+* [Java](https://github.com/intersystems-community/native-api-contest-template/blob/master/src/java/README.md)
+* [Python](https://github.com/intersystems-community/native-api-contest-template/blob/master/src/python/README.md)
+* [.NET Core](https://github.com/intersystems-community/native-api-contest-template/blob/master/src/dotnet/README.md)
+* [NodeJS](https://github.com/intersystems-community/native-api-contest-template/blob/master/src/nodejs/README.md)
 
 Each of the included examples can be built and executed in the container by running `./run.sh` from their respective directories.
 
