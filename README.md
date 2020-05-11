@@ -55,7 +55,7 @@ Make sure you have [git](https://git-scm.com/book/en/v2/Getting-Started-Installi
 Clone/git pull the repo into any local directory e.g. like it is shown below:
 
 ```
-$ git clone git@github.com:intersystems-community/rest-api-contest-template.git
+$ git clone https://github.com/intersystems-community/native-api-contest-template
 ```
 
 Open the terminal in this directory and run:
