@@ -69,6 +69,13 @@ $ docker-compose up -d --build
 Start a bash shell to the container and execute `run.sh`
 
 
+## Troubleshooting Docker-Compose
+
+If docker-compose fails, the two most common problems are:
+
+1. Docker version mismatch.  The docker-compose specifies version 3.6. If you have a different version, you should be able to just change the version in `docker-compose.yml`
+2. Port unavailable.  If you're already running a container on your machine, you might need to change the port number that is exported.
+
 ## How to start coding
 This is a template, so you can use a template button on Github to create your own copy of this repository.
 The repository is ready to code in VSCode with ObjectScript plugin.
