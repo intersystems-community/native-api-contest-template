@@ -14,7 +14,7 @@ public class IRISNative
             IRISConnection conn = new IRISConnection();
             
             // edit this ConnectionString to match your environment
-            conn.ConnectionString = "Server=localhost; Port=51773; Namespace=User; Password=SYS; User ID=_system; SharedMemory=false; logfile=./dbnative.log";
+            conn.ConnectionString = "Server=localhost; Port=1972; Namespace=User; Password=SYS; User ID=_system; SharedMemory=false; logfile=./dbnative.log";
             conn.Open();
             
             
@@ -60,6 +60,14 @@ public class IRISNative
             Console.WriteLine(returnValue);
 
             Console.WriteLine();
+
+            IRISReference freeMB = new IRISReference(0); // set inital value to 0
+            String dir = "C:/InterSystems/IRIS/mgr/iristemp"; // directory to be tested
+            Object status = null;
+
+            Console.Write("\n\nCalling %SYS.DatabaseQuery.GetDatabaseFreeSpace()... ");
+            status = iris.ClassMethodObject("%SYS.DatabaseQuery","GetDatabaseFreeSpace",dir,freeMB);
+            Console.WriteLine("\nFree space in " + dir + " = " + freeMB.value + "MB");
 
             // close IRIS object and connection
             iris.Close();

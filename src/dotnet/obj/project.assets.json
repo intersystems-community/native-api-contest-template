@@ -769,30 +769,37 @@
     ]
   },
   "packageFolders": {
-    "/Users/rkuszews/.nuget/packages/": {}
+    "C:\\Users\\rkuszews\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/rkuszews/Downloads/native-api-contest-template/src/dotnet/dotnet.csproj",
+      "projectUniqueName": "C:\\Users\\rkuszews\\Iris\\dotnet\\native-api-contest-template\\src\\dotnet\\dotnet.csproj",
       "projectName": "dotnet",
-      "projectPath": "/Users/rkuszews/Downloads/native-api-contest-template/src/dotnet/dotnet.csproj",
-      "packagesPath": "/Users/rkuszews/.nuget/packages/",
-      "outputPath": "/Users/rkuszews/Downloads/native-api-contest-template/src/dotnet/obj/",
+      "projectPath": "C:\\Users\\rkuszews\\Iris\\dotnet\\native-api-contest-template\\src\\dotnet\\dotnet.csproj",
+      "packagesPath": "C:\\Users\\rkuszews\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\rkuszews\\Iris\\dotnet\\native-api-contest-template\\src\\dotnet\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "/Users/rkuszews/Downloads/native-api-contest-template/src/dotnet/NuGet.Config",
-        "/Users/rkuszews/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\rkuszews\\Iris\\dotnet\\native-api-contest-template\\src\\dotnet\\NuGet.Config",
+        "C:\\Users\\rkuszews\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"
       ],
       "sources": {
-        "/Users/rkuszews/Downloads/native-api-contest-template/src/dotnet/./nupkg": {},
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Users\\rkuszews\\Iris\\dotnet\\native-api-contest-template\\src\\dotnet\\nupkg": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.1": {
+          "targetAlias": "netcoreapp2.1",
           "projectReferences": {}
         }
       },
@@ -804,6 +811,7 @@
     },
     "frameworks": {
       "netcoreapp2.1": {
+        "targetAlias": "netcoreapp2.1",
         "dependencies": {
           "IRISProviderCore21": {
             "target": "Package",
@@ -826,7 +834,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.102/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100-rc.2.20479.15\\RuntimeIdentifierGraph.json"
       }
     }
   }
