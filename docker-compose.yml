@@ -9,7 +9,7 @@ services:
 
 #      - 51773
 # new Superserver Port
-      - 53773
+      - 1972
       - 42773:52773
       - 53773
     volumes:
