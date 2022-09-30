@@ -6,7 +6,8 @@ ARG IMAGE=store/intersystems/iris-community:2020.1.0.197.0
 ARG IMAGE=intersystemsdc/iris-community:2020.1.0.209.0-zpm
 ARG IMAGE=intersystemsdc/iris-community:2020.1.0.215.0-zpm
 ARG IMAGE=intersystemsdc/iris-community:2020.2.0.196.0-zpm
-ARG IMAGE=intersystemsdc/iris-community:latest
+ARG IMAGE=intersystemsdc/iris-community
+FROM $IMAGE
 
 USER root
 
@@ -16,6 +17,8 @@ RUN chown ${ISC_PACKAGE_MGRUSER}:${ISC_PACKAGE_IRISGROUP} /opt/irisapp
 COPY  --chown=irisowner irissession.sh /
 RUN chmod +x /irissession.sh 
 
+####  fix interactive input issues
+RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
 ###########################################
 #### Install Java 8
 RUN apt-get update && \
