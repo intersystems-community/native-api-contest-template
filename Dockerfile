@@ -25,8 +25,8 @@ RUN apt-get update && \
 	apt-get install -y openjdk-8-jdk && \
 	apt-get install -y ant && \
 	apt-get clean && \
-	rm -rf /var/lib/apt/lists/* && \
-	rm -rf /var/cache/oracle-jdk8-installer;
+	rm -rf /var/lib/apt/lists/*  && \
+	rm -rf /var/cache/oracle-jdk8-installer
 	
 # Fix certificate issues, found as of 
 # https://bugs.launchpad.net/ubuntu/+source/ca-certificates-java/+bug/983302
@@ -34,39 +34,39 @@ RUN apt-get update && \
 	apt-get install -y ca-certificates-java && \
 	apt-get clean && \
 	update-ca-certificates -f && \
-	rm -rf /var/lib/apt/lists/* && \
-	rm -rf /var/cache/oracle-jdk8-installer;
+	rm -rf /var/lib/apt/lists/*  && \
+	rm -rf /var/cache/oracle-jdk8-installer
 
 # Setup JAVA_HOME, this is useful for docker commandline
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
 RUN export JAVA_HOME
 ENV JRE_HOME /usr/lib/jvm/java-8-openjdk-amd64/
 RUN export JRE_HOME
-ENV CLASSPATH .:/usr/irissys/dev/java/lib/JDK18/*:/usr/irissys/dev/java/lib/gson/*:/usr/irissys/dev/java/lib/jackson/*
+ENV CLASSPATH .:/usr/irissys/dev/java/lib/1.8/*:/usr/irissys/dev/java/lib/gson/*:/usr/irissys/dev/java/lib/jackson/*
 RUN export CLASSPATH
 
 ###########################################
 #### Install .NET Core 2.1
-RUN wget https://packages.microsoft.com/config/ubuntu/19.10/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
-RUN dpkg -i packages-microsoft-prod.deb
+# RUN wget https://packages.microsoft.com/config/ubuntu/19.10/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+# RUN dpkg -i packages-microsoft-prod.deb
 
-RUN \
-	apt-get install -y apt-transport-https && \
-  apt-get update && \
-	apt-get install -y dotnet-sdk-2.1 && \
-	apt-get install -y dotnet-runtime-2.1 && \
-	apt-get clean && \
-	update-ca-certificates -f && \
-	rm -rf /var/lib/apt/lists/* && \
-	rm -rf /var/cache/oracle-jdk8-installer;
+# RUN \
+# 	apt-get install -y apt-transport-https && \
+#   apt-get update && \
+# 	apt-get install -y dotnet-sdk-2.1 && \
+# 	apt-get install -y dotnet-runtime-2.1 && \
+# 	apt-get clean && \
+# 	update-ca-certificates -f && \
+# 	rm -rf /var/lib/apt/lists/* && \
+# 	rm -rf /var/cache/oracle-jdk8-installer
 
 ###########################################
 ##### Install Node.JS 10
-RUN \
-  apt-get update && \
-  apt-get -y install curl gnupg
-RUN curl -sL https://deb.nodesource.com/setup_10.x  | bash -
-RUN apt-get -y install nodejs
+# RUN \
+#   apt-get update && \
+#   apt-get -y install curl gnupg
+# RUN curl -sL https://deb.nodesource.com/setup_10.x  | bash -
+# RUN apt-get -y install nodejs
 
 ###########################################
 ##### Install Python
